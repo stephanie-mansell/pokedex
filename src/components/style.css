@@ -1,0 +1,150 @@
+p {
+  margin: 0;
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card_back,
+.card_front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.09);
+}
+
+.card_front {
+  z-index: 2;
+}
+
+.card_back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(124, 124, 124);
+}
+
+.card_img img {
+  width: 180px;
+  height: auto;
+  z-index: 10;
+}
+
+.pokeball {
+  position: absolute;
+  opacity: 0.4;
+}
+
+.card_img {
+  display: flex;
+  justify-content: center;
+}
+
+.card_types {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.card_type {
+  padding: 5px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.card_name {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+.card_info {
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.card_data {
+  padding-bottom: 10px;
+}
+
+.card_data .title {
+  font-weight: 700;
+}
+
+.card_data_ability {
+  text-transform: capitalize;
+}
+
+.inner-style {
+  border-radius: 10px;
+  display: table;
+}
+
+.poke_number {
+  padding: 5px 10px;
+  text-align: right;
+  color: rgb(10, 3, 3, 0.3);
+}
+
+.stat_text {
+  font-size: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  margin-right: 10px;
+}
+
+.stat_text_atk {
+  font-size: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700;
+}
+
+.card_stats {
+  margin: 2px;
+  margin-bottom: 3px;
+  justify-items: center;
+  display: inline-block;
+}
+
+.stat_name {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card_data_container {
+  display: flex;
+  justify-content: space-between;
+}
